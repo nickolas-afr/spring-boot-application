@@ -1,0 +1,70 @@
+2024-12-01T21:04:38.352+02:00  INFO 10276 --- [spring-boot-app] [main] c.e.s.SpringBootAppApplication           : Starting SpringBootAppApplication using Java 23.0.1 with PID 10276 (C:\Users\nikol\source\repos\@java\spring-boot-app\target\classes started by Niko in C:\Users\nikol\source\repos\@java\spring-boot-app)
+2024-12-01T21:04:38.354+02:00  INFO 10276 --- [spring-boot-app] [main] c.e.s.SpringBootAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-01T21:04:38.774+02:00  INFO 10276 --- [spring-boot-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-01T21:04:38.807+02:00  INFO 10276 --- [spring-boot-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2024-12-01T21:04:39.101+02:00  INFO 10276 --- [spring-boot-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-01T21:04:39.110+02:00  INFO 10276 --- [spring-boot-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-01T21:04:39.111+02:00  INFO 10276 --- [spring-boot-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-01T21:04:39.143+02:00  INFO 10276 --- [spring-boot-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-01T21:04:39.143+02:00  INFO 10276 --- [spring-boot-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 756 ms
+2024-12-01T21:04:39.211+02:00  INFO 10276 --- [spring-boot-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-01T21:04:39.313+02:00  INFO 10276 --- [spring-boot-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@902fdbe
+2024-12-01T21:04:39.314+02:00  INFO 10276 --- [spring-boot-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-01T21:04:39.351+02:00  INFO 10276 --- [spring-boot-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-01T21:04:39.378+02:00  INFO 10276 --- [spring-boot-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-01T21:04:39.397+02:00  INFO 10276 --- [spring-boot-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-01T21:04:39.554+02:00  INFO 10276 --- [spring-boot-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-01T21:04:39.605+02:00  INFO 10276 --- [spring-boot-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-01T21:04:40.153+02:00  INFO 10276 --- [spring-boot-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-01T21:04:40.155+02:00  INFO 10276 --- [spring-boot-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-01T21:04:40.584+02:00  INFO 10276 --- [spring-boot-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-01T21:04:40.588+02:00  INFO 10276 --- [spring-boot-app] [main] c.e.s.SpringBootAppApplication           : Started SpringBootAppApplication in 2.501 seconds (process running for 2.856)
+2024-12-01T21:04:43.786+02:00  INFO 10276 --- [spring-boot-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-01T21:04:43.788+02:00  INFO 10276 --- [spring-boot-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-01T21:04:43.788+02:00  INFO 10276 --- [spring-boot-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-01T21:04:43.817+02:00  INFO 10276 --- [spring-boot-app] [http-nio-8080-exec-1] c.e.s.p.services.GetProductService       : Executing class com.example.springbootapp.product.services.GetProductService input: 40
+2024-12-01T21:04:43.859+02:00 ERROR 10276 --- [spring-boot-app] [http-nio-8080-exec-1] c.e.s.e.ProductNotFoundException         : Exception class com.example.springbootapp.exceptions.ProductNotFoundException thrown.
+2024-12-01T21:10:47.923+02:00  INFO 10276 --- [spring-boot-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-01T21:10:47.930+02:00  INFO 10276 --- [spring-boot-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-01T21:10:47.932+02:00  INFO 10276 --- [spring-boot-app] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-01T21:10:47.935+02:00  INFO 10276 --- [spring-boot-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-01T21:10:47.940+02:00  INFO 10276 --- [spring-boot-app] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-01T21:10:51.963+02:00  INFO 11612 --- [spring-boot-app] [main] c.e.s.SpringBootAppApplication           : Starting SpringBootAppApplication using Java 23.0.1 with PID 11612 (C:\Users\nikol\source\repos\@java\spring-boot-app\target\classes started by Niko in C:\Users\nikol\source\repos\@java\spring-boot-app)
+2024-12-01T21:10:51.965+02:00  INFO 11612 --- [spring-boot-app] [main] c.e.s.SpringBootAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-01T21:10:52.419+02:00  INFO 11612 --- [spring-boot-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-01T21:10:52.452+02:00  INFO 11612 --- [spring-boot-app] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2024-12-01T21:10:52.726+02:00  INFO 11612 --- [spring-boot-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-01T21:10:52.734+02:00  INFO 11612 --- [spring-boot-app] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-01T21:10:52.734+02:00  INFO 11612 --- [spring-boot-app] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-01T21:10:52.765+02:00  INFO 11612 --- [spring-boot-app] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-01T21:10:52.765+02:00  INFO 11612 --- [spring-boot-app] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 768 ms
+2024-12-01T21:10:52.830+02:00  INFO 11612 --- [spring-boot-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-01T21:10:52.929+02:00  INFO 11612 --- [spring-boot-app] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e3f0aea
+2024-12-01T21:10:52.930+02:00  INFO 11612 --- [spring-boot-app] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-01T21:10:52.973+02:00  INFO 11612 --- [spring-boot-app] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-01T21:10:53.001+02:00  INFO 11612 --- [spring-boot-app] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-01T21:10:53.020+02:00  INFO 11612 --- [spring-boot-app] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-01T21:10:53.174+02:00  INFO 11612 --- [spring-boot-app] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-01T21:10:53.227+02:00  INFO 11612 --- [spring-boot-app] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-01T21:10:53.774+02:00  INFO 11612 --- [spring-boot-app] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-01T21:10:53.776+02:00  INFO 11612 --- [spring-boot-app] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-01T21:10:54.179+02:00  INFO 11612 --- [spring-boot-app] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-01T21:10:54.182+02:00  INFO 11612 --- [spring-boot-app] [main] c.e.s.SpringBootAppApplication           : Started SpringBootAppApplication in 2.469 seconds (process running for 2.812)
+2024-12-01T21:11:05.113+02:00  INFO 11612 --- [spring-boot-app] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-01T21:11:05.114+02:00  INFO 11612 --- [spring-boot-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-01T21:11:05.115+02:00  INFO 11612 --- [spring-boot-app] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-01T21:11:05.144+02:00  INFO 11612 --- [spring-boot-app] [http-nio-8080-exec-1] c.e.s.p.services.GetProductService       : Executing class com.example.springbootapp.product.services.GetProductsService
