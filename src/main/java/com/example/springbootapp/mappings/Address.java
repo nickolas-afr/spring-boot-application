@@ -24,8 +24,8 @@ public class Address {
     @Column(name = "region")
     private String region;
 
-    @Column(name = "customer_id")
-    private Integer customer_id;
+    //@Column(name = "customer_id")
+    //private Integer customer_id;
 
     @ManyToMany(mappedBy = "addresses")
     @JsonIgnore
