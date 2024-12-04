@@ -32,3 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 *.log
+/mylog.log.2024-12-02.0.gz
