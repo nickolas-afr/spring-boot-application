@@ -1,5 +1,6 @@
 package com.example.springbootapp.mappings;
 
+import com.example.springbootapp.exceptions.CustomerNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +18,10 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Customer> getCustomerById(@PathVariable Integer id){
-        return ResponseEntity.ok(customerRepository.findById(id).get());
+    public ResponseEntity<Customer> getCustomerById(@PathVariable Integer id) {
+        if(customerRepository.findById(id).isPresent())
+            return ResponseEntity.ok(customerRepository.findById(id).get());
+        else
+            throw new CustomerNotFoundException();
     }
 }

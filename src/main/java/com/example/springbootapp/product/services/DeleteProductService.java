@@ -29,7 +29,7 @@ public class DeleteProductService implements Command<Integer, Void> {
         logger.info("Executing " + getClass() + " input: " + input);
 
         Optional<Product> productOptional = productRepository.findById(input);
-        if(productOptional.isPresent()){
+        if (productOptional.isPresent()) {
             productRepository.deleteById(input);
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }

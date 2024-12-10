@@ -8,24 +8,24 @@ import org.springframework.web.bind.annotation.RestController;
 public class SecurityController {
 
     @GetMapping("/open")
-    public String open(){
+    public String open() {
         return "OPEN";
     }
 
     @GetMapping("/closed")
-    public String closed(){
+    public String closed() {
         return "CLOSED";
     }
 
     @PreAuthorize("hasRole('superuser')")
     @GetMapping("/special")
-    public String special(){
+    public String special() {
         return "SPECIAL";
     }
 
     @PreAuthorize("hasRole('superuser') or hasRole('basic')")
     @GetMapping("/basic")
-    public String basic(){
+    public String basic() {
         return "BASIC";
     }
 

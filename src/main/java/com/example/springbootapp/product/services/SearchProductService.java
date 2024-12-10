@@ -25,7 +25,7 @@ public class SearchProductService implements Query<String, List<ProductDTO>> {
 
         logger.info("Executing " + getClass() + " for product name: " + name);
 
-        return  ResponseEntity.ok(productRepository.findByNameContaining(name)
+        return ResponseEntity.ok(productRepository.findByNameContaining(name)
                 .stream().map(ProductDTO::new).toList());
     }
 }

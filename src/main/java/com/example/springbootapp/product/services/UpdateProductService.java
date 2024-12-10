@@ -8,9 +8,7 @@ import com.example.springbootapp.product.model.ProductDTO;
 import com.example.springbootapp.product.model.UpdateProductCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +18,7 @@ import java.util.Optional;
 public class UpdateProductService implements Command<UpdateProductCommand, ProductDTO> {
 
     private static final Logger logger = LoggerFactory.getLogger(GetProductService.class);
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public UpdateProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -33,7 +31,7 @@ public class UpdateProductService implements Command<UpdateProductCommand, Produ
         logger.info("Executing " + getClass() + "for id: " + input);
 
         Optional<Product> productOptional = productRepository.findById(input.getId());
-        if(productOptional.isPresent()){
+        if (productOptional.isPresent()) {
             Product product = input.getProduct();
             product.setId(input.getId());
 

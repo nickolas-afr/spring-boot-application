@@ -5,15 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class ProductNotFoundException extends RuntimeException {
+public class CustomerNotFoundException extends RuntimeException {
 
-    private static final Logger logger = LoggerFactory.getLogger(ProductNotFoundException.class);
+    private static final Logger logger = LoggerFactory.getLogger(CustomerNotFoundException.class);
 
-    public ProductNotFoundException() {
+    public CustomerNotFoundException() {
 
-        super(ErrorMessages.ACCOUNT_NOT_FOUND.getMessage());
+        super(ErrorMessages.CUSTOMER_NOT_FOUND.getMessage());
         logger.error("Exception " + getClass() + " thrown.");
     }
 }

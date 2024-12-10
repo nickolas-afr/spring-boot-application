@@ -20,11 +20,11 @@ public class CreateNewUserController {
     }
 
     @PostMapping("/createnewuser")
-    public ResponseEntity<String> createNewUser(@RequestBody CustomUser user){
+    public ResponseEntity<String> createNewUser(@RequestBody CustomUser user) {
 
         Optional<CustomUser> optionalUser = customUserRepository.findById(user.getUsername());
 
-        if(!optionalUser.isPresent()){
+        if (!optionalUser.isPresent()) {
             customUserRepository.save(new CustomUser(user.getUsername(), encoder.encode(user.getPassword())));
             return ResponseEntity.ok("Success");
         }

@@ -31,7 +31,7 @@ public class GetProductService implements Query<Integer, ProductDTO> {
         logger.info("Executing " + getClass() + " input: " + input);
 
         Optional<Product> productOptional = productRepository.findById(input);
-        if(productOptional.isPresent()){
+        if (productOptional.isPresent()) {
             return ResponseEntity.ok(new ProductDTO(productOptional.get()));
         }
 
